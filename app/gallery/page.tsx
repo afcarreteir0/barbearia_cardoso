@@ -69,7 +69,7 @@ export default function GalleryPage() {
         ))}
       </div> */}
 
-      <div className="mt-14 rounded-3xl border border-ink/10 bg-stone p-8 shadow-[var(--shadow-warm)]">
+      <div className="no-justify mt-14 rounded-3xl border border-ink/10 bg-stone p-8 shadow-[var(--shadow-warm)]">
         <div className="mt-6">
           <div
             className="elfsight-app-50220a31-dbf7-4053-b302-a58762ebf2fc"

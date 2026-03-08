@@ -14,12 +14,12 @@ const services = [
   {
     title: "Corte Clássico",
     description:
-      "Consulta personalizada, lavagem e acabamento preciso para um visual alinhado e intemporal."
+      "Consulta personalizada, lavagem e acabamento para um visual exatamente como quer."
   },
   {
     title: "Corte + Barba",
     description:
-      "Equilíbrio entre cabelo e barba com toalha quente, hidratação e desenho cuidadoso."
+      "Equilíbrio entre cabelo e barba com toalha quente e hidratação, não sai daqui com cortes na cara."
   },
   {
     title: "Aparar Barba",
@@ -40,14 +40,13 @@ export default function ServicesPage() {
         <div>
           <p className="text-sm uppercase tracking-[0.3em] text-ember">Serviços</p>
           <h1 className="mt-4 font-display text-4xl md:text-5xl">
-            Serviços completos de barbearia em Linda-a-Velha.
+            Serviços completos.
           </h1>
           <p className="mt-4 text-lg text-ink/70">
-            Cuidamos do seu estilo com técnica moderna, rituais clássicos e atenção ao detalhe. Os
-            nossos barbeiros criam um atendimento personalizado para cada cliente.
+          Na nossa barbearia oferecemos um serviço de grooming masculino completo, pensado para quem valoriza o seu visual.
           </p>
         </div>
-        <div className="rounded-3xl border border-ink/10 bg-stone p-8 shadow-[var(--shadow-warm)]">
+        <div className="no-justify rounded-3xl border border-ink/10 bg-stone p-8 shadow-[var(--shadow-warm)]">
           <h2 className="text-sm uppercase tracking-[0.3em] text-ember">Resumo rápido</h2>
           <ul className="mt-4 space-y-3 text-sm text-ink/70">
             <li>Atendimento profissional e acolhedor</li>
@@ -60,7 +59,7 @@ export default function ServicesPage() {
 
       <div className="mt-12 grid gap-6 md:grid-cols-2">
         {services.map((service) => (
-          <div key={service.title} className="rounded-3xl border border-ink/10 bg-white p-8">
+          <div key={service.title} className="no-justify rounded-3xl border border-ink/10 bg-white p-8">
             <h2 className="text-2xl font-semibold">{service.title}</h2>
             <p className="mt-3 text-sm text-ink/70">{service.description}</p>
           </div>
@@ -78,12 +77,18 @@ export default function ServicesPage() {
         <div>
           <h2 className="font-display text-3xl">Grooming completo para cabelo e barba.</h2>
           <p className="mt-4 text-ink/70">
-            Criamos um ritual de grooming pensado para o seu ritmo. Cada serviço inclui aconselhamento,
-            acabamento detalhado e recomendações de cuidado em casa.
+            Cada atendimento começa com uma breve introdução para compreender o estilo pretendido, o tipo de cabelo e as preferências pessoais, garantindo um resultado adaptado a cada cliente.
           </p>
           <p className="mt-4 text-ink/70">
-            Trabalhamos com cortes masculinos modernos e clássicos, mantendo o equilíbrio entre
-            tradição e estilo contemporâneo.
+          Especializamo-nos em cortes masculinos modernos e clássicos, desde estilos mais tradicionais até tendências mais arrojadas.
+          A técnica, a precisão e a atenção ao detalhe fazem parte de cada corte
+          </p>
+          <p className="mt-4 text-ink/70">
+          No final de cada sessão, prestamos também aconselhamento personalizado sobre cuidados em casa, incluindo sugestões de manutenção do corte, tratamento da barba e utilização de produtos adequados.
+          O objetivo é garantir que o estilo se mantém cuidado e definido mesmo entre visitas à barbearia.
+          </p>
+          <p className="mt-4 text-ink/70">
+          Mais do que um simples corte de cabelo, proporcionamos uma experiência completa de barbearia, onde tradição, técnica e atenção ao detalhe se unem para criar um resultado consistente, elegante e duradouro.
           </p>
         </div>
       </div>

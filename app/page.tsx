@@ -95,7 +95,7 @@ export default function Home() {
             ].map((service) => (
               <div
                 key={service.title}
-                className="rounded-2xl border border-ink/10 bg-white p-6 shadow-[0_18px_40px_rgba(0,0,0,0.08)]"
+                className="no-justify rounded-2xl border border-ink/10 bg-white p-6 shadow-[0_18px_40px_rgba(0,0,0,0.08)]"
               >
                 <h3 className="text-lg font-semibold">{service.title}</h3>
                 <p className="mt-3 text-sm text-ink/70">{service.text}</p>
@@ -136,13 +136,13 @@ export default function Home() {
           ].map((item) => (
             <div
               key={item.src}
-              className="snap-start overflow-hidden rounded-3xl border border-ink/10 bg-white shadow-[var(--shadow-warm)]"
+              className="snap-start overflow-hidden rounded-1xl border border-ink/10 bg-white shadow-[var(--shadow-warm)]"
             >
               <div className="h-64 w-80 md:h-96 md:w-120">
                 <Image
                   src={item.src}
                   alt={item.alt}
-                  width={640}
+                  width={900}
                   height={480}
                   className="h-full w-full object-cover"
                 />
@@ -168,7 +168,7 @@ export default function Home() {
               Marcar agora
             </Link>
           </div>
-          <div className="rounded-3xl border border-cream/15 bg-ink/80 p-8">
+          <div className="no-justify rounded-3xl border border-cream/15 bg-ink/80 p-8">
             <p className="text-sm uppercase tracking-[0.3em] text-sun">Ritual completo</p>
             <p className="mt-3 text-lg font-semibold">Corte + barba com acabamento de precisão.</p>
             <p className="mt-4 text-cream/70">
@@ -193,8 +193,8 @@ export default function Home() {
             <iframe
               title="Mapa Barbearia do Cardoso"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3113.1359356769135!2d-9.237563663289476!3d38.714687935629016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1ecc7ce782928f%3A0x312bfb550d791f7a!2sBarbearia%20Do%20Cardoso!5e0!3m2!1spt-PT!2spt!4v1772820985472!5m2!1spt-PT!2spt"
-              width="500"
-              height="450"
+              width="480"
+              height="250"
               style={{ border: 0 }}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
@@ -205,17 +205,17 @@ export default function Home() {
 
       <section className="mx-auto max-w-6xl px-6 pb-20">
         <div className="grid gap-6 md:grid-cols-3">
-          <div className="rounded-3xl border border-ink/10 bg-white p-8">
+          <div className="no-justify rounded-3xl border border-ink/10 bg-white p-8">
             <p className="text-xs uppercase tracking-[0.25em] text-ember">Morada</p>
             <p className="mt-4 text-lg font-semibold">Av. 25 de Abril de 1974 11A</p>
             <p className="text-ink/70">2795-197 Linda-a-Velha</p>
           </div>
-          <div className="rounded-3xl border border-ink/10 bg-white p-8">
+          <div className="no-justify rounded-3xl border border-ink/10 bg-white p-8">
             <p className="text-xs uppercase tracking-[0.25em] text-ember">Telefone</p>
             <p className="mt-4 text-lg font-semibold">214 191 538</p>
             <p className="text-ink/70">Chamada para a rede fixa nacional</p>
           </div>
-          <div className="rounded-3xl border border-ink/10 bg-white p-8">
+          <div className="no-justify rounded-3xl border border-ink/10 bg-white p-8">
             <p className="text-xs uppercase tracking-[0.25em] text-ember">Horário</p>
             <p className="mt-4 text-sm text-ink/70">Seg-Sex: 9h00-19h00</p>
             <p className="text-sm text-ink/70">Sáb: 9h00-13h00</p>
@@ -225,7 +225,7 @@ export default function Home() {
       </section>
 
       <section className="mx-auto max-w-6xl px-6 pb-20">
-        <div className="rounded-[32px] border border-ink/10 bg-stone p-10 shadow-[var(--shadow-warm)]">
+        <div className="no-justify rounded-[32px] border border-ink/10 bg-stone p-10 shadow-[var(--shadow-warm)]">
           <p className="text-sm uppercase tracking-[0.3em] text-ember">Avaliações</p>
           <h2 className="mt-4 font-display text-3xl md:text-4xl">
             Clientes que voltam todas as semanas.
@@ -248,7 +248,7 @@ export default function Home() {
                 text: "Excelente atendimento, simpatia e eficiência. Já frequento à cerca de 3 anos, sempre impecáveis atendimento 5 estrelas!"
               }
             ].map((review) => (
-              <div key={review.name} className="rounded-2xl border border-ink/10 bg-white p-6">
+              <div key={review.name} className="no-justify rounded-2xl border border-ink/10 bg-white p-6">
                 <p className="text-sm text-ink/70">"{review.text}"</p>
                 <p className="mt-4 text-xs uppercase tracking-[0.2em] text-ink/60">{review.name}</p>
               </div>

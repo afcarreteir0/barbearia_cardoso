@@ -23,7 +23,7 @@ export default function ContactPage() {
             espaço e falar com os nossos barbeiros.
           </p>
         </div>
-        <div className="rounded-3xl border border-ink/10 bg-stone p-8">
+        <div className="no-justify rounded-3xl border border-ink/10 bg-stone p-8">
           <h2 className="text-sm uppercase tracking-[0.3em] text-ember">Informações</h2>
           <div className="mt-4 space-y-4 text-sm text-ink/70">
             <div>

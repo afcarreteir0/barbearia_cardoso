@@ -25,11 +25,11 @@ export default function AboutPage() {
             relaxada, damos as boas vindas a todos os clientes.
           </p>
         </div>
-        <div className="rounded-3xl border border-ink/10 bg-stone p-8">
+        <div className="no-justify rounded-3xl border border-ink/10 bg-stone p-8">
           <h2 className="text-sm uppercase tracking-[0.3em] text-ember">O que nos distingue</h2>
           <ul className="mt-4 space-y-3 text-sm text-ink/70">
             <li>Equipa experiente com consulta personalizada.</li>
-            <li>Interior moderno com cadeiras de couro e madeira clara.</li>
+            <li>Valorizamos o humor e a boa disposição.</li>
             <li>Ambiente comunitário, de vizinhança e proximidade.</li>
             <li>Atenção especial à higiene e conforto.</li>
           </ul>

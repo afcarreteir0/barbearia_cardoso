@@ -22,7 +22,7 @@ export default function BookingPage() {
             O sistema de marcação permite escolher barbeiro, serviço e horário em poucos minutos.
             Recebe confirmação imediata e lembrete antes da visita.
           </p>
-          <div className="mt-8 rounded-3xl border border-ink/10 bg-stone p-6">
+          <div className="no-justify mt-8 rounded-3xl border border-ink/10 bg-stone p-6">
             <h2 className="text-lg font-semibold">Informações úteis</h2>
             <ul className="mt-4 space-y-2 text-sm text-ink/70">
               <li>Cancelamentos gratuitos até 12 horas antes.</li>
@@ -31,9 +31,12 @@ export default function BookingPage() {
             </ul>
           </div>
         </div>
-        <div className="rounded-3xl border border-ink/10 bg-white p-6 shadow-[var(--shadow-warm)]">
+        <div className="no-justify rounded-3xl border border-ink/10 bg-white p-6 shadow-[var(--shadow-warm)]">
           <h2 className="text-sm uppercase tracking-[0.3em] text-ember">Widget de marcação</h2>
-          <div id="booking-widget" className="mt-6 rounded-2xl border border-ink/10 bg-stone p-6 text-sm text-ink/70">
+          <div
+            id="booking-widget"
+            className="no-justify mt-6 rounded-2xl border border-ink/10 bg-stone p-6 text-sm text-ink/70"
+          >
             EMBED_BOOKING_IFRAME_HERE
           </div>
         </div>
