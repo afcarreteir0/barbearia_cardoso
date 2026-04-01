@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Script from "next/script";
 import type { Metadata } from "next";
 
@@ -11,39 +10,16 @@ export const metadata: Metadata = {
   }
 };
 
-const galleryImages = [
-  {
-    src: "/images/corte-masculino-linda-a-velha.svg",
-    alt: "Corte masculino moderno em barbearia de Linda-a-Velha"
-  },
-  {
-    src: "/images/barba-linda-a-velha.svg",
-    alt: "Barba alinhada com acabamento detalhado"
-  },
-  {
-    src: "/images/ferramentas-barbearia-linda-a-velha.svg",
-    alt: "Ferramentas classicas de barbeiro em bancada"
-  },
-  {
-    src: "/images/interior-barbearia-linda-a-velha.svg",
-    alt: "Interior elegante da Barbearia do Cardoso"
-  },
-  {
-    src: "/images/barbeiro-linda-a-velha.svg",
-    alt: "Barbeiro em ação com ambiente clássico"
-  }
-];
-
 export default function GalleryPage() {
   return (
-    <div className="mx-auto max-w-6xl px-6 py-16">
+    <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-16">
       <Script src="https://static.elfsight.com/platform/platform.js" strategy="afterInteractive" />
       <div>
-        <p className="text-sm uppercase tracking-[0.3em] text-ember">Galeria</p>
-        <h1 className="mt-4 font-display text-4xl md:text-5xl">
+        <p className="text-xs uppercase tracking-[0.2em] text-ember sm:text-sm md:tracking-[0.3em]">Galeria</p>
+        <h1 className="mt-4 font-display text-3xl md:text-5xl">
           O Nosso Trabalho em Destaque
         </h1>
-        <p className="mt-4 text-lg text-ink/70">
+        <p className="mt-4 text-base text-ink/70 md:text-lg">
           Espreita alguns dos cortes e estilos feitos na Barbearia do Cardoso. Cada detalhe conta, desde fades precisos a barbas bem definidas.
         </p>
       </div>

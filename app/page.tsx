@@ -14,21 +14,26 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <div>
-      <section
-        className="relative overflow-hidden bg-cover bg-center"
-        style={{ backgroundImage: "url('/images/hero_barbearia.png')" }}
-      >
+      <section className="relative overflow-hidden">
+        <Image
+          src="/images/hero_barbearia.webp"
+          alt="Interior da Barbearia do Cardoso"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center"
+        />
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/55 to-black/20" />
         <div className="absolute inset-0 bg-[linear-gradient(120deg,rgba(0,0,0,0.2),rgba(176,132,76,0.18))]" />
-        <div className="mx-auto grid max-w-6xl items-center gap-10 px-6 pb-24 pt-20 md:grid-cols-[1.05fr_0.95fr]">
-          <div className="relative z-10 space-y-6">
-            <p className="reveal text-sm uppercase tracking-[0.3em] text-sun">
+        <div className="mx-auto grid max-w-6xl items-center gap-8 px-4 pb-16 pt-14 sm:px-6 sm:pb-20 sm:pt-16 md:grid-cols-[1.05fr_0.95fr] md:gap-10 md:pb-24 md:pt-20">
+          <div className="relative z-10 space-y-5 md:space-y-6">
+            <p className="reveal text-xs uppercase tracking-[0.2em] text-sun sm:text-sm md:tracking-[0.3em]">
               Barbearia em Linda-a-Velha
             </p>
-            <h1 className="reveal reveal-delay-1 font-display text-4xl leading-tight text-cream md:text-6xl">
+            <h1 className="reveal reveal-delay-1 font-display text-3xl leading-tight text-cream sm:text-4xl md:text-6xl">
               Senta-te na cadeira. Nós tratamos do resto.
             </h1>
-            <p className="reveal reveal-delay-2 text-lg text-cream/80">
+            <p className="reveal reveal-delay-2 text-base text-cream/80 sm:text-lg">
               Tradição e estilo no coração de Linda-a-Velha. Não há quem saia daqui sem o corte perfeito e um sorriso na cara, agenda já a tua reserva.
             </p>
             <div className="reveal reveal-delay-3 flex flex-wrap items-center gap-4">
@@ -49,10 +54,11 @@ export default function Home() {
           <div className="relative z-10 hidden md:block">
             <div className="overflow-hidden rounded-[4px] border border-cream/20 shadow-[var(--shadow-warm)]">
               <Image
-                src="/images/corte_barbearia_cardoso.png"
+                src="/images/corte_barbearia_cardoso.webp"
                 alt="Barbeiro em ação na Barbearia do Cardoso"
                 width={720}
                 height={960}
+                sizes="(max-width: 768px) 100vw, 45vw"
                 className="h-full w-full object-cover"
               />
             </div>
@@ -61,11 +67,11 @@ export default function Home() {
       </section>
 
       <section className="bg-stone">
-        <div className="mx-auto max-w-6xl px-6 py-16">
+        <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-16">
           <div className="flex flex-wrap items-end justify-between gap-6">
             <div>
-              <p className="text-sm uppercase tracking-[0.3em] text-ember">Serviços</p>
-              <h2 className="font-display text-3xl md:text-4xl">Corte, barba e grooming com detalhe.</h2>
+              <p className="text-xs uppercase tracking-[0.2em] text-ember sm:text-sm md:tracking-[0.3em]">Serviços</p>
+              <h2 className="font-display text-2xl md:text-4xl">Corte, barba e grooming com detalhe.</h2>
             </div>
             <Link
               href="/services"
@@ -105,11 +111,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-6 py-16">
+      <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-16">
         <div className="flex flex-wrap items-center justify-between gap-6">
           <div>
-            <p className="text-sm uppercase tracking-[0.3em] text-sun">Galeria</p>
-            <h2 className="font-display text-3xl md:text-4xl">Momentos divertidos, luz natural e atenção ao detalhe.</h2>
+            <p className="text-xs uppercase tracking-[0.2em] text-sun sm:text-sm md:tracking-[0.3em]">Galeria</p>
+            <h2 className="font-display text-2xl md:text-4xl">Momentos divertidos, luz natural e atenção ao detalhe.</h2>
           </div>
           <Link href="/gallery" className="text-sm uppercase tracking-[0.2em] text-ink/70">
             Ver galeria
@@ -118,19 +124,19 @@ export default function Home() {
         <div className="mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4">
           {[
             {
-              src: "/images/cardoso_barbearia.png",
+              src: "/images/cardoso_barbearia.webp",
               alt: "Corte masculino moderno na barbearia de Linda-a-Velha"
             },
             {
-              src: "/images/barbeiro_2.png",
+              src: "/images/barbeiro_2.webp",
               alt: "Barbeiro em ação na Barbearia do Cardoso"
             },
             {
-              src: "/images/barbeiro_galeria.png",
+              src: "/images/barbeiro_galeria.webp",
               alt: "Barbeiro em ação na Barbearia do Cardoso"
             },
             {
-              src: "/images/barbeiro_3.png",
+              src: "/images/barbeiro_3.webp",
               alt: "Barbeiro em ação na Barbearia do Cardoso"
             }
           ].map((item) => (
@@ -138,12 +144,13 @@ export default function Home() {
               key={item.src}
               className="snap-start overflow-hidden rounded-1xl border border-ink/10 bg-white shadow-[var(--shadow-warm)]"
             >
-              <div className="h-64 w-80 md:h-96 md:w-120">
+              <div className="h-56 w-[76vw] max-w-[20rem] sm:h-64 sm:w-80 md:h-96 md:w-[30rem]">
                 <Image
                   src={item.src}
                   alt={item.alt}
                   width={900}
                   height={480}
+                  sizes="(max-width: 640px) 76vw, (max-width: 768px) 20rem, 30rem"
                   className="h-full w-full object-cover"
                 />
               </div>
@@ -153,10 +160,10 @@ export default function Home() {
       </section>
 
       <section className="bg-charcoal text-cream">
-        <div className="mx-auto grid max-w-6xl items-center gap-10 px-6 py-16 md:grid-cols-[1.2fr_0.8fr]">
+        <div className="mx-auto grid max-w-6xl items-center gap-8 px-4 py-14 sm:px-6 sm:py-16 md:grid-cols-[1.2fr_0.8fr] md:gap-10">
           <div>
-            <p className="text-sm uppercase tracking-[0.3em] text-sun">Marcação</p>
-            <h2 className="font-display text-3xl md:text-4xl">Reserve o seu horário sem esperas.</h2>
+            <p className="text-xs uppercase tracking-[0.2em] text-sun sm:text-sm md:tracking-[0.3em]">Marcação</p>
+            <h2 className="font-display text-2xl md:text-4xl">Reserve o seu horário sem esperas.</h2>
             <p className="mt-4 text-cream/70">
               Use o nosso sistema de marcação para escolher o barbeiro, o serviço e o horário
               mais conveniente. Confirmação imediata.
@@ -179,11 +186,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-6 py-16">
+      <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-16">
         <div className="grid gap-10 md:grid-cols-[1.1fr_0.9fr]">
           <div>
-            <p className="text-sm uppercase tracking-[0.3em] text-ember">Visite-nos</p>
-            <h2 className="font-display text-3xl md:text-4xl">No centro de Linda-a-Velha, com fácil acesso.</h2>
+            <p className="text-xs uppercase tracking-[0.2em] text-ember sm:text-sm md:tracking-[0.3em]">Visite-nos</p>
+            <h2 className="font-display text-2xl md:text-4xl">No centro de Linda-a-Velha, com fácil acesso.</h2>
             <p className="mt-4 text-ink/70">
               A barbearia fica perto de comércio local e transportes. Consulte os detalhes abaixo
               para planear a sua visita.
@@ -193,8 +200,7 @@ export default function Home() {
             <iframe
               title="Mapa Barbearia do Cardoso"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3113.1359356769135!2d-9.237563663289476!3d38.714687935629016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1ecc7ce782928f%3A0x312bfb550d791f7a!2sBarbearia%20Do%20Cardoso!5e0!3m2!1spt-PT!2spt!4v1772820985472!5m2!1spt-PT!2spt"
-              width="480"
-              height="250"
+              className="h-[240px] w-full md:h-[250px]"
               style={{ border: 0 }}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
@@ -203,7 +209,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-6 pb-20">
+      <section className="mx-auto max-w-6xl px-4 pb-16 sm:px-6 sm:pb-20">
         <div className="grid gap-6 md:grid-cols-3">
           <div className="no-justify rounded-3xl border border-ink/10 bg-white p-8">
             <p className="text-xs uppercase tracking-[0.25em] text-ember">Morada</p>
@@ -224,9 +230,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-6 pb-20">
+      <section className="mx-auto max-w-6xl px-4 pb-16 sm:px-6 sm:pb-20">
         <div className="no-justify rounded-[32px] border border-ink/10 bg-stone p-10 shadow-[var(--shadow-warm)]">
-          <p className="text-sm uppercase tracking-[0.3em] text-ember">Avaliações</p>
+          <p className="text-xs uppercase tracking-[0.2em] text-ember sm:text-sm md:tracking-[0.3em]">Avaliações</p>
           <h2 className="mt-4 font-display text-3xl md:text-4xl">
             Clientes que voltam todas as semanas.
           </h2>

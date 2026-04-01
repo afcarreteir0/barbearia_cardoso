@@ -12,14 +12,14 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="mx-auto max-w-6xl px-6 py-16">
+    <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-16">
       <div className="grid gap-10 md:grid-cols-[1.05fr_0.95fr]">
         <div>
-          <p className="text-sm uppercase tracking-[0.3em] text-ember">Sobre</p>
-          <h1 className="mt-4 font-display text-4xl md:text-5xl">
+          <p className="text-xs uppercase tracking-[0.2em] text-ember sm:text-sm md:tracking-[0.3em]">Sobre</p>
+          <h1 className="mt-4 font-display text-3xl md:text-5xl">
             Uma barbearia com olhar contemporâneo.
           </h1>
-          <p className="mt-4 text-lg text-ink/70">
+          <p className="mt-4 text-base text-ink/70 md:text-lg">
             A Barbearia do Cardoso nasceu em 2017 para unir a tradição de barbearia clássica com a energia
             moderna de Lisboa. O nosso espaço é aberto, luminoso e pensado para criar uma atmosfera
             relaxada, damos as boas vindas a todos os clientes.
@@ -38,10 +38,11 @@ export default function AboutPage() {
 
       <div className="mt-14 grid gap-10 md:grid-cols-[0.9fr_1.1fr]">
         <Image
-          src="/images/sobre_barbearia.png"
+          src="/images/sobre_barbearia.webp"
           alt="Cadeiras de barbeiro modernas na Barbearia do Cardoso"
           width={620}
           height={520}
+          sizes="(max-width: 768px) 100vw, 40vw"
           className="rounded-3xl object-cover shadow-[var(--shadow-warm)]"
         />
         <div>

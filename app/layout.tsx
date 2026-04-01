@@ -1,6 +1,7 @@
 import "./globals.css";
 import Link from "next/link";
 import type { Metadata } from "next";
+import MobileMenu from "./components/mobile-menu";
 
 const businessInfo = {
   name: "Barbearia do Cardoso",
@@ -44,37 +45,39 @@ const jsonLd = {
   }
 };
 
+const navItems = [
+  { href: "/services", label: "Serviços" },
+  { href: "/booking", label: "Marcação" },
+  { href: "/gallery", label: "Galeria" },
+  { href: "/about", label: "Sobre" },
+  { href: "/contact", label: "Contacto" }
+];
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="pt-PT">
       <body className="relative">
         <div className="noise-overlay" aria-hidden="true" />
         <header className="relative z-10">
-          <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
-            <Link href="/" className="font-display text-2xl tracking-[0.08em]">
+          <nav className="relative mx-auto flex max-w-6xl items-center justify-between px-4 py-5 md:px-6 md:py-6">
+            <Link href="/" className="pr-3 font-display text-xl tracking-[0.08em] sm:text-2xl">
               {businessInfo.name}
             </Link>
             <div className="hidden items-center gap-6 text-sm uppercase tracking-[0.18em] text-ink/70 md:flex">
-              <Link href="/services">Serviços</Link>
-              <Link href="/booking">Marcação</Link>
-              <Link href="/gallery">Galeria</Link>
-              <Link href="/about">Sobre</Link>
-              <Link href="/contact">Contacto</Link>
+              {navItems.map((item) => (
+                <Link key={item.href} href={item.href}>
+                  {item.label}
+                </Link>
+              ))}
             </div>
             <Link
               href="/booking"
-              className="rounded-full bg-ink px-5 py-2 text-sm uppercase tracking-[0.2em] text-cream shadow-[var(--shadow-warm)]"
+              className="hidden rounded-full bg-ink px-5 py-2 text-sm uppercase tracking-[0.2em] text-cream shadow-[var(--shadow-warm)] md:inline-flex"
             >
               Marcar
             </Link>
+            <MobileMenu items={navItems} />
           </nav>
-          <div className="mx-auto flex max-w-6xl flex-wrap gap-4 px-6 pb-6 text-xs uppercase tracking-[0.22em] text-ink/60 md:hidden">
-            <Link href="/services">Serviços</Link>
-            <Link href="/booking">Marcação</Link>
-            <Link href="/gallery">Galeria</Link>
-            <Link href="/about">Sobre</Link>
-            <Link href="/contact">Contacto</Link>
-          </div>
         </header>
         <main className="relative z-10">{children}</main>
         <footer className="relative z-10 border-t border-ink/10 bg-charcoal text-cream">

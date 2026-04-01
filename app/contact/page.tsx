@@ -11,14 +11,14 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <div className="mx-auto max-w-6xl px-6 py-16">
+    <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-16">
       <div className="grid gap-10 md:grid-cols-[1.05fr_0.95fr]">
         <div>
-          <p className="text-sm uppercase tracking-[0.3em] text-ember">Contacto</p>
-          <h1 className="mt-4 font-display text-4xl md:text-5xl">
+          <p className="text-xs uppercase tracking-[0.2em] text-ember sm:text-sm md:tracking-[0.3em]">Contacto</p>
+          <h1 className="mt-4 font-display text-3xl md:text-5xl">
             Estamos em Linda-a-Velha, prontos para o receber.
           </h1>
-          <p className="mt-4 text-lg text-ink/70">
+          <p className="mt-4 text-base text-ink/70 md:text-lg">
             Encontre-nos no centro de linda-a-velha, se passar pela A5 faça um pequeno desvio e cá estaremos. Fale connosco por telefone, faça a sua reserva aqui ou passe para conhecer o
             espaço e falar com os nossos barbeiros.
           </p>
@@ -56,8 +56,7 @@ export default function ContactPage() {
         <iframe
           title="Mapa Barbearia do Cardoso"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3113.1359356769135!2d-9.237563663289476!3d38.714687935629016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1ecc7ce782928f%3A0x312bfb550d791f7a!2sBarbearia%20Do%20Cardoso!5e0!3m2!1spt-PT!2spt!4v1772820985472!5m2!1spt-PT!2spt"
-          width="1150"
-          height="450"
+          className="h-[280px] w-full md:h-[450px]"
           style={{ border: 0 }}
           loading="lazy"
         />

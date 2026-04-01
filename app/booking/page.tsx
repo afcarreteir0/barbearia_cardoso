@@ -11,14 +11,14 @@ export const metadata: Metadata = {
 
 export default function BookingPage() {
   return (
-    <div className="mx-auto max-w-6xl px-6 py-16">
+    <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-16">
       <div className="grid gap-10 md:grid-cols-[1.05fr_0.95fr]">
         <div>
-          <p className="text-sm uppercase tracking-[0.3em] text-ember">Marcação</p>
-          <h1 className="mt-4 font-display text-4xl md:text-5xl">
+          <p className="text-xs uppercase tracking-[0.2em] text-ember sm:text-sm md:tracking-[0.3em]">Marcação</p>
+          <h1 className="mt-4 font-display text-3xl md:text-5xl">
             Marque o seu horário com total conforto.
           </h1>
-          <p className="mt-4 text-lg text-ink/70">
+          <p className="mt-4 text-base text-ink/70 md:text-lg">
             O sistema de marcação permite escolher barbeiro, serviço e horário em poucos minutos.
             Recebe confirmação imediata e lembrete antes da visita.
           </p>

@@ -35,14 +35,14 @@ const services = [
 
 export default function ServicesPage() {
   return (
-    <div className="mx-auto max-w-6xl px-6 py-16">
+    <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-16">
       <div className="grid gap-12 md:grid-cols-[1.1fr_0.9fr]">
         <div>
-          <p className="text-sm uppercase tracking-[0.3em] text-ember">Serviços</p>
-          <h1 className="mt-4 font-display text-4xl md:text-5xl">
+          <p className="text-xs uppercase tracking-[0.2em] text-ember sm:text-sm md:tracking-[0.3em]">Serviços</p>
+          <h1 className="mt-4 font-display text-3xl md:text-5xl">
             Serviços completos.
           </h1>
-          <p className="mt-4 text-lg text-ink/70">
+          <p className="mt-4 text-base text-ink/70 md:text-lg">
           Na nossa barbearia oferecemos um serviço de grooming masculino completo, pensado para quem valoriza o seu visual.
           </p>
         </div>
@@ -68,10 +68,11 @@ export default function ServicesPage() {
 
       <div className="mt-14 grid gap-8 md:grid-cols-[0.9fr_1.1fr]">
         <Image
-          src="/images/cortar_cabelo_barbearia.png"
+          src="/images/cortar_cabelo_barbearia.webp"
           alt="Espaço moderno da barbearia em Linda-a-Velha"
           width={620}
           height={520}
+          sizes="(max-width: 768px) 100vw, 40vw"
           className="rounded-3xl object-cover shadow-[var(--shadow-warm)]"
         />
         <div>
