@@ -56,9 +56,9 @@ const navItems = [
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="pt-PT">
-      <body className="relative">
+      <body className="relative overflow-x-hidden">
         <div className="noise-overlay" aria-hidden="true" />
-        <header className="relative z-10">
+        <header className="relative">
           <nav className="relative mx-auto flex max-w-6xl items-center justify-between px-4 py-5 md:px-6 md:py-6">
             <Link href="/" className="pr-3 font-display text-xl tracking-[0.08em] sm:text-2xl">
               {businessInfo.name}
@@ -79,8 +79,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <MobileMenu items={navItems} />
           </nav>
         </header>
-        <main className="relative z-10">{children}</main>
-        <footer className="relative z-10 border-t border-ink/10 bg-charcoal text-cream">
+        <main className="relative">{children}</main>
+        <footer className="relative border-t border-ink/10 bg-charcoal text-cream">
           <div className="mx-auto grid max-w-6xl gap-8 px-6 py-12 md:grid-cols-[1.4fr_1fr_1fr]">
             <div>
               <p className="font-display text-xl">{businessInfo.name}</p>

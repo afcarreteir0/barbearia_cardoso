@@ -37,6 +37,15 @@ main h6 {
   text-justify: auto;
 }
 
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
 .noise-overlay {
   position: fixed;
   inset: 0;

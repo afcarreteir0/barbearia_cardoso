@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import Script from "next/script";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -121,37 +122,37 @@ export default function Home() {
             Ver galeria
           </Link>
         </div>
-        <div className="mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4">
+        <div className="no-scrollbar -mx-4 mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-4 sm:mx-0 sm:px-0 [scroll-padding-inline:1rem] sm:[scroll-padding-inline:0] lg:grid lg:grid-cols-4 lg:gap-5 lg:overflow-visible lg:px-0 lg:pb-0">
           {[
             {
               src: "/images/cardoso_barbearia.webp",
-              alt: "Corte masculino moderno na barbearia de Linda-a-Velha"
+              alt: "Corte masculino moderno na barbearia de Linda-a-Velha",
+              position: "object-[50%_45%]"
             },
             {
               src: "/images/barbeiro_2.webp",
-              alt: "Barbeiro em ação na Barbearia do Cardoso"
+              alt: "Barbeiro em ação na Barbearia do Cardoso",
+              position: "object-center"
             },
             {
               src: "/images/barbeiro_galeria.webp",
-              alt: "Barbeiro em ação na Barbearia do Cardoso"
+              alt: "Barbeiro em ação na Barbearia do Cardoso",
+              position: "object-center"
             },
             {
               src: "/images/barbeiro_3.webp",
-              alt: "Barbeiro em ação na Barbearia do Cardoso"
+              alt: "Barbeiro em ação na Barbearia do Cardoso",
+              position: "object-center"
             }
           ].map((item) => (
-            <div
-              key={item.src}
-              className="snap-start overflow-hidden rounded-1xl border border-ink/10 bg-white shadow-[var(--shadow-warm)]"
-            >
-              <div className="h-56 w-[76vw] max-w-[20rem] sm:h-64 sm:w-80 md:h-96 md:w-[30rem]">
+            <div key={item.src} className="group w-[82vw] max-w-[22rem] shrink-0 snap-start self-start sm:w-80 lg:w-full lg:max-w-none lg:min-w-0">
+              <div className="relative aspect-[4/5] overflow-hidden rounded-[2px]">
                 <Image
                   src={item.src}
                   alt={item.alt}
-                  width={900}
-                  height={480}
-                  sizes="(max-width: 640px) 76vw, (max-width: 768px) 20rem, 30rem"
-                  className="h-full w-full object-cover"
+                  fill
+                  sizes="(max-width: 640px) 82vw, (max-width: 1024px) 20rem, 25vw"
+                  className={`h-full w-full object-cover transition duration-300 lg:group-hover:scale-[1.01] ${item.position}`}
                 />
               </div>
             </div>
@@ -239,26 +240,9 @@ export default function Home() {
           <p className="mt-3 text-ink/70">
             Avaliação média 4.8/5 com mais de 215 avaliações reais da comunidade.
           </p>
-          <div className="mt-8 grid gap-6 md:grid-cols-3">
-            {[
-              {
-                name: "Rui C.",
-                text: "O melhor de Lisboa, se tiver de escolher é sempre aqui sem hipótese."
-              },
-              {
-                name: "Ivo F.",
-                text: "Experiência muito boa com pessoal muito porreiro e divertido preço aceitável com a qualidade de serviço prestado voltarei sem dúvida, parabéns pelo serviço."
-              },
-              {
-                name: "Ricardo M.",
-                text: "Excelente atendimento, simpatia e eficiência. Já frequento à cerca de 3 anos, sempre impecáveis atendimento 5 estrelas!"
-              }
-            ].map((review) => (
-              <div key={review.name} className="no-justify rounded-2xl border border-ink/10 bg-white p-6">
-                <p className="text-sm text-ink/70">"{review.text}"</p>
-                <p className="mt-4 text-xs uppercase tracking-[0.2em] text-ink/60">{review.name}</p>
-              </div>
-            ))}
+          <div className="mt-8">
+            <Script src="https://elfsightcdn.com/platform.js" strategy="afterInteractive" />
+            <div className="elfsight-app-7440e611-d955-4165-afa4-54f0b956bf92" data-elfsight-app-lazy />
           </div>
         </div>
       </section>
